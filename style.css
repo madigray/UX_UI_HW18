@@ -1,4 +1,5 @@
 *{
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
     list-style: none;
@@ -28,7 +29,7 @@
     float: left;
 }
 
-.logo_container h1{
+.logo_container h2{
     background-color: #101010;
     color: #FA7682;
     height: 100%;
@@ -96,7 +97,7 @@
 .hero h1{
     color: #101010;
     font-family: 'Abril Fatface', cursive;
-    font-size: 80px;
+    font-size: 60px;
     padding-right: 8%;
     padding-left: 8%;
 
@@ -105,7 +106,7 @@
 .herotext p{
     color: #101010;
     font-family: 'Poppins', sans-serif;
-    font-size: 20px;
+    font-size: 16px;
     width: 600px;
     padding-right: 8%;
     padding-left: 8%;
@@ -113,25 +114,36 @@
 
 }
 
-.portfolios h1{
+.portfolios h2{
     color: #101010;
     font-family: 'Abril Fatface', cursive;
-    font-size: 40px;
+    font-size: 32px;
     text-align: center;
 }
 
-.portfolio_cards{
-    display: flex;
-    flex: wrap;
+
+@media only screen and (min-width: 768px){
+
+.portfoliosGrid{
+    /* display: flex; */
+    /* flex: wrap; */
     margin: 65px;
-    justify-content: space-between;
+    /* justify-content: space-between; */
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: 
+        "card1 card2 card3"
+    ;
     /* display: grid;
     grid-template-columns:500px 500px 500px;
     margin: 65px;
     align-items: center; */
+    }
 }
 
 .card1 {
+    grid-area: card1;
     border-radius: 25px;
     background: white;
     padding: 20px; 
@@ -141,6 +153,7 @@
 }
 
  .card2 {
+    grid-area: card2;
     border-radius: 25px;
     background: white;
     padding: 20px; 
@@ -150,6 +163,7 @@
 }
 
 .card3 {
+    grid-area: card3;
     border-radius: 25px;
     background: white;
     padding: 20px; 
@@ -169,15 +183,15 @@
 }
 
 .skills_text{
-    padding-left: 64%;
+    padding-left: 60%;
     padding-right: 8%;
 }
 
-.skills h1{
+.skills h2{
     color: #101010;
     /* height: 100%; */
     font-family: 'Abril Fatface', cursive;
-    font-size: 40px;
+    font-size: 32px;
     text-align: right;
     
 }
@@ -185,7 +199,7 @@
 .skills p{
     color: #101010;
     font-family: 'Poppins', sans-serif;
-    font-size: 20px;
+    font-size: 16px;
     width: 600px;
     padding-top: 20px;
 }
@@ -193,27 +207,50 @@
 .skills ul{
     color: #101010;
     font-family: 'Poppins', sans-serif;
-    font-size: 20px;
+    font-size: 16px;
     width: 600px;
     padding-top: 20px;
 }
 
 
-.recent_work h1{
+.recent_work h2{
     color: #101010;
     font-family: 'Abril Fatface', cursive;
-    font-size: 40px;
+    font-size: 32px;
     text-align: center;
-    }
+}
 
-.project_cards{
+
+/* .project_cards{
 display: flex;
 flex: wrap;
 margin: 65px;
 justify-content: space-between;
-}
+} */
+
+
+@media only screen and (min-width: 768px){
+
+    .workGrid{
+        /* display: flex; */
+        /* flex: wrap; */
+        margin: 65px;
+        /* justify-content: space-between; */
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: auto;
+        grid-template-areas: 
+            "project1 project2 project3"
+        ;
+        /* display: grid;
+        grid-template-columns:500px 500px 500px;
+        margin: 65px;
+        align-items: center; */
+        }
+    }
 
 .project1 {
+grid-area: project1;
 border-radius: 25px;
 background: white;
 padding: 20px; 
@@ -222,6 +259,7 @@ height: 310px;
 }
 
 .project2 {
+grid-area: project2;
 border-radius: 25px;
 background: white;
 padding: 20px; 
@@ -230,6 +268,7 @@ height: 310px;
 }
 
 .project3 {
+grid-area: project3;
 border-radius: 25px;
 background: white;
 padding: 20px; 
@@ -245,13 +284,13 @@ height: 310px;
 .footer img{
     margin: 8%;
     height: 100%;
-    justify-content: center;
+    padding-left: 32%;
 }
 
-.footer h1{
+.footer h2{
     color: #101010;
     font-family: 'Abril Fatface', cursive;
-    font-size: 40px;
+    font-size: 32px;
     text-align: center;
     overflow: hidden;
     white-space: nowrap;
@@ -260,12 +299,54 @@ height: 310px;
 .footer p{
     color: #101010;
     font-family: 'Poppins', sans-serif;
-    font-size: 20px;
+    font-size: 16px;
     text-align: center;
     padding-bottom: 200px;
+    padding-top: 10px;
 }
 
-@media only screen and (max-width:600){
-    grid-template-rows: 300px 300px 300px;
 
+.col-1 {width: 8.33%;}
+.col-2 {width: 16.66%;}
+.col-3 {width: 25%;}
+.col-4 {width: 33.33%;}
+.col-5 {width: 41.66%;}
+.col-6 {width: 50%;}
+.col-7 {width: 58.33%;}
+.col-8 {width: 66.66%;}
+.col-9 {width: 75%;}
+.col-10 {width: 83.33%;}
+.col-11 {width: 91.66%;}
+.col-12 {width: 100%;}
+
+@media only screen and (max-width: 768px) {
+    /* for mobile phones */
+    [class*="col-"]{
+        width: 100%;
+    }
+    .h1{
+        font-size: 40px;   
+    }
+    .h2{
+        font-size: 24px;
+    }
+    .p{
+        font-size: 12px;
+    }
+}
+
+[class*="col-"] {
+    float: left;
+    padding: 8px;    
+}
+@media only screen and (min-width: 769px){
+    .h1{
+        font-size: 60px;   
+    }
+    .h2{
+        font-size: 32px;
+    }
+    .p{
+        font-size: 16px;
+    }
 }
